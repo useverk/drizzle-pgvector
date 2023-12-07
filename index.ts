@@ -2,7 +2,7 @@ import { Vector } from "@useverk/vector";
 import { AnyColumn, SQLWrapper, sql } from "drizzle-orm";
 import { customType } from "drizzle-orm/pg-core";
 export const customVector = customType<{
-    data: Vector;
+    data: Vector | number[];
     driverData: string;
     config: { dimensions: number };
 }>({
