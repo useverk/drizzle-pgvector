@@ -1,0 +1,16 @@
+{
+    "name": "@useverk/drizzle-pgvector",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@useverk/vector": "^1.0.1",
+        "drizzle-orm": "^0.29.1"
+    }
+}
