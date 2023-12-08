@@ -31,7 +31,7 @@ export const myTable = pgTable(
 
 ### Known issues
 
--   [ ] running `drizzle-kit generate` will generate the following sql migration files:
+-   [ ] running `drizzle-kit generate` will generate the following sql migration file:
 
     ```sql
     CREATE TABLE IF NOT EXISTS "myTable" (
