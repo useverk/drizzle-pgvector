@@ -17,9 +17,7 @@
     "author": "Simon Sardorf",
     "license": "ISC",
     "dependencies": {
-        "@useverk/vector": "^1.0.1",
-        "drizzle-orm": "^0.29.1",
-        "postgres": "^3.4.3"
+        "drizzle-orm": "^0.29.1"
     },
     "repository": {
         "type": "git",
