@@ -1,6 +1,6 @@
 {
     "name": "@useverk/drizzle-pgvector",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "main": "index.ts",
     "scripts": {
@@ -18,7 +18,8 @@
     "license": "ISC",
     "dependencies": {
         "@useverk/vector": "^1.0.1",
-        "drizzle-orm": "^0.29.1"
+        "drizzle-orm": "^0.29.1",
+        "postgres": "^3.4.3"
     },
     "repository": {
         "type": "git",

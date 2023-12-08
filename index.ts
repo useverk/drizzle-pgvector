@@ -1,6 +1,8 @@
 import { Vector } from "@useverk/vector";
 import { AnyColumn, SQLWrapper, sql } from "drizzle-orm";
 import { customType } from "drizzle-orm/pg-core";
+export { Vector };
+
 export const customVector = customType<{
     data: Vector | number[];
     driverData: string;
@@ -12,10 +14,11 @@ export const customVector = customType<{
         }
         return `vector(${config.dimensions})`;
     },
-    toDriver(value: Vector | number[]) {
+    toDriver(value: Vector | number[]): string {
         return toSql(value);
     },
-    fromDriver(value: string) {
+
+    fromDriver(value: string): Vector {
         return fromSql(value);
     },
 });
