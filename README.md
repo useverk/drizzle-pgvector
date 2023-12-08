@@ -31,5 +31,24 @@ export const myTable = pgTable(
 
 ### Known issues
 
--   [] Returns `Vector | number[]` instead of `Vector` on query results. The real type is always `Vector` but the type system doesn't know it. This is a limitation of the current version of `drizzle-orm` and will (hopefully) be fixed very soon.
-    A workaround is to use `const myVector = myResult.embedding as Vector` to get the correct type.
+-   [ ] running `drizzle-kit generate` will generate the following sql migration files:
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS "myTable" (
+    "id" serial PRIMARY KEY NOT NULL,
+    "vector" "vector(1536)"
+    );
+    ```
+
+    which is not valid postgresql syntax.
+    Simply remove the quotes around the type name to fix it.
+    The correct syntax is:
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS "myTable" (
+    "id" serial PRIMARY KEY NOT NULL,
+    "vector" vector(1536)
+    );
+    ```
+
+    Will fix this once `drizzle-kit` is open-source.
