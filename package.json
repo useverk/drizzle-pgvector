@@ -2,11 +2,20 @@
     "name": "@useverk/drizzle-pgvector",
     "version": "1.0.8",
     "description": "",
-    "main": "index.ts",
-    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "generate": "drizzle-kit generate:pg"
+        "generate": "drizzle-kit generate:pg",
+        "build": "tsup src/index.ts --format cjs,esm --dts --clean"
     },
     "keywords": [
         "pgvector",
@@ -29,6 +38,8 @@
     "devDependencies": {
         "@types/pg": "^8.10.9",
         "drizzle-kit": "^0.20.6",
-        "postgres": "^3.4.3"
+        "postgres": "^3.4.3",
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3"
     }
 }
