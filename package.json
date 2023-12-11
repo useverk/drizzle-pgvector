@@ -1,6 +1,6 @@
 {
     "name": "@useverk/drizzle-pgvector",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "",
     "main": "index.ts",
     "type": "module",
